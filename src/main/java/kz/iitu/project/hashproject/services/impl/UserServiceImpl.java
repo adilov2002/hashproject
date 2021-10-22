@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users createUser(Users user) {
-            Users checkUser = userRepository.findByEmail(user.getEmail());
+        Users checkUser = userRepository.findByEmail(user.getEmail());
         if (checkUser == null){
             Roles role= roleRepository.findByRole("ROLE_USER");
             if (role != null){
